@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz v6 BEST VER REAL sobs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abel&family=Comfortaa&family=Dosis&family=IBM+Plex+Sans&family=M+PLUS+Rounded+1c&family=Montserrat&family=Mulish&family=Nanum+Gothic&family=Quicksand&family=Raleway&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #FDEEDC;
+        }
+
+        #main-container {
+            background-color: #FFD8A9;
+            border: 2px solid #E38B29;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 800px;
+            height: 600px;
+            margin: auto;
+        }
+
+        #header-q {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .options {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            background-color: #F1A661;
+            border: 2px solid #E38B29;
+
+            margin-top: 4%;
+            margin-bottom: 2%;
+            width: 700px;
+            height: 200px;
+        }
+
+        li {
+            display: block;
+        }
+
+        #finalButton {
+            display: none;
+        }
+
+        #hi{
+            visibility: hidden;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            text-align: center;
+
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all-powerful-container">
+
+        <div id="main-container">
+
+            <div id="question-area">
+                <h1 id="header-q">a</h1>
+            </div>
+
+            <div class="options">
+                <ul id="theUL"><br>
+                    <li id="one">
+                        <input type="radio" name="option" id="option-a" value="a">
+                        <label id="for-a"></label>
+                    </li><br>
+
+                    <li id="two">
+                        <input type="radio" name="option" id="option-b" value="b">
+                        <label id="for-b"></label>
+                    </li><br>
+
+                    <li id="three">
+                        <input type="radio" name="option" id="option-c" value="c">
+                        <label id="for-c"></label>
+                    </li><br>
+
+                    <li id="four">
+                        <input type="radio" name="option" id="option-d" value="d">
+                        <label id="for-d"></label>
+                    </li><br>
+                </ul>
+
+                <p id="hi">...</p>
+            </div>
+
+            <div class="buttonsss">
+                <button type="button" id="next" onclick="nextQuestion()">Next Question</button>
+                <button type="submit" id="finalButton">Submit and View Results</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const arr1 = [
+            {
+                question: "What does HTML stand for?",
+                a: 'Hyper Text Markup Language',
+                b: 'Hyper Textile Marking Language',
+                c: 'HTML',
+                d: 'HTML 5',
+                answer: "a",
+            },
+
+            {
+                question: "What does CSS stand for?",
+                a: 'CSS',
+                b: 'Catching Sleeping Slugs',
+                c: 'Cascading Style Sheets',
+                d: 'Computer System Styling',
+                answer: "c",
+            },
+
+            {
+                question: "How can you center a div easily with CSS?",
+                a: 'Use margin: auto;',
+                b: 'Use padding: 30px;',
+                c: 'Use border: 75%;',
+                d: 'Just tell it to move there.',
+                answer: 'a',
+            },
+
+            {
+                question: "What can the animation shorthand command do in CSS?",
+                a: 'Name, duration, timing function, delay.',
+                b: 'Name, duration, timing function, animation delay, iteration count, direction, fill mode, play state.',
+                c: 'Name, duration, delay, iteration count, direction, fill mode, play state.',
+                d: 'Nothing',
+                answer: 'b',
+            },
+
+            {
+                question: "What can border-radius do in CSS?",
+                a: 'Tell you the radius of the border.',
+                b: 'Rounds the edges of the border.',
+                c: 'Changes the length of the border.',
+                d: 'Lets you change the color of the border.',
+                answer: 'b',
+            },
+
+            {
+                question: "What does font-family allow you to change in CSS?",
+                a: 'The type of font it is (Serif, sans serif, cursive, etc.).',
+                b: 'The font size.',
+                c: 'The family the font is in.',
+                d: 'The font used in the project.',
+                answer: 'd',
+            },
+
+            {
+                question: "Where does padding go in CSS?",
+                a: 'Between the page walls and the object edges.',
+                b: 'In the object font.',
+                c: 'Right around the object exterior.',
+                d: 'Inside the object.',
+                answer: 'd',
+            },
+
+            {
+                question: "What does visibility: hidden; do in CSS?",
+                a: 'Shows the object.',
+                b: 'Deletes the object.',
+                c: 'Hides the object and does not keep the space.',
+                d: 'Hides the object, but keeps the space it occupied.',
+                answer: 'd',
+            },
+
+            {
+                question: "What display can display have in CSS?",
+                a: 'Block',
+                b: 'Outline',
+                c: 'Rally',
+                d: 'Group',
+                answer: 'a',
+            },
+
+            {
+                question: "Which is true about z-index in CSS?",
+                a: 'The object will be in front of all others.',
+                b: 'The lower an object has the z-index, the more forward it will be.',
+                c: 'z-index stacks the objects, starting from least to greatest.',
+                d: 'z-index: auto; will always bring the specified object to the front.',
+                answer: "c",
+            },
+        ]
+        const arr2 = []
+
+        var score = 0;
+        var num = 0;
+
+        document.getElementById('header-q').innerHTML = arr1[num].question
+        document.getElementById('for-a').innerHTML = arr1[num].a
+        document.getElementById('for-b').innerHTML = arr1[num].b
+        document.getElementById('for-c').innerHTML = arr1[num].c
+        document.getElementById('for-d').innerHTML = arr1[num].d
+        var theAnswer = arr1[num].answer.toString()
+        document.getElementById('option-a').checked = false
+        document.getElementById('option-b').checked = false
+        document.getElementById('option-c').checked = false
+        document.getElementById('option-d').checked = false
+
+        function nextQuestion() {
+            if (document.getElementById("option-a").checked === true) {
+                arr2.push("a")
+                console.log(arr2[num])
+                console.log(arr1[num].answer)
+            }
+
+            else if (document.getElementById('option-b').checked === true) {
+                arr2.push("b")
+                console.log(arr2[num])
+                console.log(arr1[num].answer)
+            }
+
+            else if (document.getElementById('option-c').checked === true) {
+                arr2.push("c")
+                console.log(arr2[num])
+                console.log(arr1[num].answer)
+            }
+
+            else if (document.getElementById('option-d').checked === true) {
+                arr2.push("d")
+                console.log(arr2[num])
+                console.log(arr1[num].answer)
+            }
+
+            else {
+                arr2.push("noAnswer")
+                console.log(arr2[num])
+                console.log(arr1[num].answer)
+            }
+
+            num += 1
+
+            if (num <= 9) {
+                document.getElementById('header-q').innerHTML = arr1[num].question
+                document.getElementById('for-a').innerHTML = arr1[num].a
+                document.getElementById('for-b').innerHTML = arr1[num].b
+                document.getElementById('for-c').innerHTML = arr1[num].c
+                document.getElementById('for-d').innerHTML = arr1[num].d
+                const theAnswer = arr1[num].answer.toString()
+
+                document.getElementById('option-a').checked = false
+                document.getElementById('option-b').checked = false
+                document.getElementById('option-c').checked = false
+                document.getElementById('option-d').checked = false
+            }
+
+            if (num >= 9) {
+                document.getElementById('next').style.display = "none"
+                document.getElementById('finalButton').style.display = "initial"
+
+                document.getElementById('finalButton').onclick = function () { scorer() };
+            }
+
+
+        }
+
+
+
+        function scorer() {
+            document.getElementById('finalButton').style.display = "none"
+
+            for (var i = 0; i <= 9; i++) {
+                if (arr2[i] === arr1[i].answer) {
+                    score += 1
+                }
+
+                else {
+                    score += 0
+                }
+            }
+
+            console.log(score)
+            document.getElementById('header-q').innerHTML = "Your Score: " +score
+            document.getElementById('theUL').style.display = "none"
+
+            document.getElementById('hi').style.visibility = "visible"            
+            document.getElementById('hi').style.marginTop = "20px"
+            document.getElementById('hi').innerText = "Thank you for completing this quiz."
+
+        }
+    </script>
+</body>
+
+</html>
